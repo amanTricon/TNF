@@ -1,0 +1,63 @@
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  img{
+    height: 40px;
+    width: 40px;
+  }
+  
+  .logo {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .company-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #0077b5;
+  }
+  
+  .subtitle {
+    font-size: 12px;
+    color: #666666;
+  }
+  
+  .header-actions {
+    display: flex;
+    align-items: center;
+  }
+  
+  .notifications, .cart, .user {
+    margin-right: 20px;
+    position: relative;
+  }
+  
+  .notifications .badge {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 10px;
+  }
+  
+  .bell-icon, .cart-icon, .user-icon, .dropdown-icon {
+    font-size: 24px;
+  }
+  
+  .user-name {
+    margin-left: 8px;
+    font-size: 16px;
+  }
+  
+  .dropdown-icon {
+    margin-left: 4px;
+  }
+  
