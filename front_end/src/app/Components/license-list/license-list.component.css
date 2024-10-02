@@ -1,0 +1,144 @@
+.licenses-container{
+    padding: 20px;
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Header Styling */
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .button-container {
+    display: flex;
+    gap: 10px;
+  }
+  
+  button {
+    padding: 10px 15px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .create-btn {
+    background-color: #04637a;
+    color: white;
+  }
+  
+  .download-btn {
+    background-color: #0f8fa7;
+    color: white;
+  }
+  
+  /* Table Styling */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  th, td {
+    padding: 12px 15px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #e9eef5;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  td {
+    color: #555;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  td a {
+    color: #04637a;
+    text-decoration: none;
+  }
+  
+  td a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Status and License Types */
+  td:last-child {
+    text-align: center;
+  }
+  
+  .status {
+    color: #28a745;
+    font-weight: bold;
+  }
+  
+  .business-model {
+    color: #17a2b8;
+  }
+  
+  /* Hover and Active Effects */
+  tbody tr:hover {
+    background-color: #f1f7fc;
+  }
+  
+  tbody tr:last-child td {
+    border-bottom: none;
+  }
+  
+  /* Optional: Dots Menu */
+  .dots-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .dots-menu:after {
+    content: '⋮';
+    font-size: 18px;
+    color: #666;
+  }
+  
+  /* Scroll Behavior for Large Tables */
+  table {
+    margin-top: 20px;
+    width: 100%;
+  }
+  
+  table th, table td {
+    padding: 12px;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .license-list {
+      padding: 10px;
+    }
+    
+    table {
+      font-size: 14px;
+    }
+  
+    button {
+      font-size: 12px;
+    }
+  
+    .button-container {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  

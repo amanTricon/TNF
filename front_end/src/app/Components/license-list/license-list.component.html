@@ -1,2 +1,29 @@
-<p>license-list works!</p>
-<app-side-nav></app-side-nav>
+<div class="licenses-container">
+    <div class="button-container">
+        <button class="btn create-btn">CREATE NEW</button>
+        <button class="btn download-btn">DOWNLOAD AS CSV</button>
+    </div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>ORDER NO.</th>
+          <th>LICENSE NAME</th>
+          <th>BUSINESS MODEL</th>
+          <th>START DATE</th>
+          <th>END DATE</th>
+          <th>STATUS</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let license of list">
+          <td>{{ license.id || 'N/A' }}</td>
+          <td><a href="#">{{ license.title || 'eReader' }}</a></td>
+          <td>{{ license.businessModel || 'Perpetual' }}</td>
+          <td>{{ license.startDate || '23 Aug 2024' }}</td>
+          <td>{{ license.endDate || 'N/A' }}</td>
+          <td>{{ license.status || 'Active' }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>  
+
