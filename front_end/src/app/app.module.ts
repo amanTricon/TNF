@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
-
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './Components/header/header.component';
@@ -12,10 +12,10 @@ import { ConcurrencyComponent } from './Components/concurrency/concurrency.compo
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/licenses', pathMatch: 'full' }, 
+  { path: '', redirectTo: 'licenses', pathMatch: 'full' }, 
   { path: 'licenses', component: LicenseListComponent },
   { path: 'licenses/:id', component: LicenseDetailComponent },
-  { path: 'new-license', component: LicenseFormComponent },
+  { path: 'new-license', component:LicenseFormComponent},
   { path: 'concurrency', component: ConcurrencyComponent }
 ];
 
@@ -32,7 +32,8 @@ const routes: Routes = [
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    HttpClientModule
   ],
   providers: [
     provideClientHydration()
