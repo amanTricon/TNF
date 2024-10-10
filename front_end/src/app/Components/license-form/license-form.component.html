@@ -1,1 +1,87 @@
-<p>license-form works!</p>
+<div class="main-content">
+    <!-- Toggle Buttons for License Type -->
+    <div class="toggle-buttons">
+        <button class="toggle-button" [class.active]="licenseType === 'premium'" (click)="selectLicenseType('premium')">Premium License</button>
+        <button class="toggle-button" [class.active]="licenseType === 'non-premium'" (click)="selectLicenseType('non-premium')">Non-Premium License</button>
+    </div>
+
+    <!-- License Form -->
+    <div class="form-container">
+        <form>
+            <!-- Toggle Sections Based on Selected License Type -->
+            <div *ngIf="licenseType === 'premium'" class="license-section premium-license">
+                <h3>Premium License Form</h3>
+
+                <!-- Application Selection -->
+                <label>License Name *</label>
+                <input type="text" [(ngModel)]="form.application" name="application" [ngModelOptions]="{standalone: true}" />
+
+                <!-- Product Bundle Section -->
+                <div class="product-bundle-section">
+                    <label>Product Bundle *</label>
+                    <div class="search-input-container">
+                        <input
+                            type="text"
+                            [(ngModel)]="form.productBundle"
+                            name="productBundlePremium"
+                            [ngModelOptions]="{standalone: true}"
+                            (keydown.enter)="onSearchChange(form.productBundle)"
+                            placeholder="Search by Product Bundle Name"
+                        />
+                    </div>
+
+                    <!-- Dropdown with Search Results -->
+                    <div class="dropdown" *ngIf="showDropdown">
+                        <ul>
+                            <li *ngFor="let bundle of filteredBundles" (click)="selectBundle(bundle)">
+                                {{ bundle }}
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- DRM Policies Section -->
+                <div class="drm-policies-section">
+                    <h3>DRM Policies</h3>
+                    <p>2 titles are DRM protected. Please review/edit the titles.</p>
+                    <div class="drm-details">
+                        <p>CONCURRENCY: <b>1</b></p>
+                        <p>PRINT/COPY: <b>20</b></p>
+                    </div>
+                    <a href="#">View/Edit concurrency per title</a>
+                </div>
+            </div>
+
+            <!-- Non-Premium License Section -->
+            <div *ngIf="licenseType === 'non-premium'" class="license-section non-premium-license">
+                <h3>Non-Premium License Form</h3>
+
+                <!-- Application Selection -->
+                <label>License Name *</label>
+                <input type="text" [(ngModel)]="form.application" name="applicationNonPremium" [ngModelOptions]="{standalone: true}" />
+
+                <!-- Product Bundle Section -->
+                <div class="product-bundle-section">
+                    <label>Product Bundle *</label>
+                    <div class="search-input-container">
+                        <input
+                            type="text"
+                            [(ngModel)]="form.productBundle"
+                            name="productBundleNonPremium"
+                            [ngModelOptions]="{standalone: true}"
+                            (keydown.enter)="onSearchChange(form.productBundle)"
+                            placeholder="Search by Product Bundle Name"
+                        />
+                        <button type="button" class="search-button">🔍</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Form Buttons -->
+            <div class="form-buttons">
+                <button type="submit" class="save-button">SAVE</button>
+                <button type="button" class="cancel-button">CANCEL</button>
+            </div>
+        </form>
+    </div>
+</div>
