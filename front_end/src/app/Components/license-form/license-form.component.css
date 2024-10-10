@@ -1,0 +1,187 @@
+/* Main Content Styling */
+.main-content {
+    margin-left: 250px; /* Adjust this to match the width of your sidebar */
+    padding: 20px;
+    background-color: #f9f9f9;
+    min-height: 100vh;
+  }
+  
+  /* Toggle Buttons Styling */
+  .toggle-buttons {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+  }
+  
+  .toggle-button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #e0e0e0;
+    cursor: pointer;
+  }
+  
+  .toggle-button.active {
+    background-color: #4caf50;
+    color: #fff;
+  }
+  
+  /* Form Container Styling */
+  .form-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  /* Section Heading */
+  .form-container h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  /* Labels and Inputs */
+  .form-container label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+  
+  .form-container input[type="text"],
+  .form-container input[type="date"],
+  .form-container select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box;
+  }
+  
+  /* Toggle Switches */
+  .toggle-switches {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  /* Product Bundle Section */
+  .product-bundle-section {
+    margin-top: 20px;
+  }
+  
+  .product-bundle-section .search-input-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .product-bundle-section input[type="text"] {
+    width: calc(100% - 50px);
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px 0 0 4px;
+  }
+  
+  .product-bundle-section .search-button {
+    width: 50px;
+    padding: 10px;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  /* Bulk Upload */
+  .bulk-upload {
+    margin-top: 20px;
+    padding: 20px;
+    border: 2px dashed #ddd;
+    text-align: center;
+    border-radius: 8px;
+    background-color: #f1f1f1;
+  }
+  
+  .bulk-upload .upload-button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #4caf50;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  /* DRM Policies Section */
+  .drm-policies-section {
+    margin-top: 20px;
+  }
+  
+  .drm-policies-section h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .drm-policies-section .drm-details {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  
+  /* Form Buttons */
+  .form-buttons {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 20px;
+  }
+  
+  .save-button,
+  .cancel-button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .save-button {
+    background-color: #4caf50;
+    color: #fff;
+  }
+  
+  .cancel-button {
+    background-color: #f44336;
+    color: #fff;
+  }
+  .dropdown {
+    top: 100%;
+    left: 12px;
+    right: 0;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-top: none;
+    max-height: 150px;
+    overflow-y: auto;
+    z-index: 1;
+  }
+  
+  .dropdown ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .dropdown li {
+    padding: 8px 12px;
+    cursor: pointer;
+  }
+  
+  .dropdown li:hover {
+    background-color: #f1f1f1;
+  }

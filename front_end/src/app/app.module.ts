@@ -10,7 +10,8 @@ import { LicenseDetailComponent } from './Components/license-detail/license-deta
 import { LicenseFormComponent } from './Components/license-form/license-form.component';
 import { ConcurrencyComponent } from './Components/concurrency/concurrency.component';
 import { RouterModule, Routes } from '@angular/router';
-
+import {  ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 const routes: Routes = [
   { path: '', redirectTo: 'licenses', pathMatch: 'full' }, 
   { path: 'licenses', component: LicenseListComponent },
@@ -33,7 +34,9 @@ const routes: Routes = [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(routes),
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     provideClientHydration()
